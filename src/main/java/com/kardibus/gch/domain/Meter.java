@@ -26,6 +26,10 @@ public class Meter {
     private Date verificationStartDate;
     private Date verificationEndDate;
 
+    @ManyToOne
+    @JoinColumn(name = "price",referencedColumnName = "id")
+    private Price price;
+
 //    @OneToMany(cascade = CascadeType.ALL,mappedBy = "id",fetch = FetchType.LAZY)
 //    private Set<Flats> flats;
 
